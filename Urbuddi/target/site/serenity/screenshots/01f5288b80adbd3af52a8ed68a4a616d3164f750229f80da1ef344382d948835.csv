@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Login test case","Login with invalid creds","SUCCESS","2023-10-27T18:39:10.475+05:30[Asia/Calcutta]","0.0","20.07"
+"Login test case","Login with valid username and valid password","SUCCESS","2023-10-27T18:39:10.477+05:30[Asia/Calcutta]","0.0","33.62"
+"Login test case","Logout from the user account","SUCCESS","2023-10-27T18:39:10.477+05:30[Asia/Calcutta]","0.0","22.55"
+"Login test case","Login with empty creds","SUCCESS","2023-10-27T18:39:10.477+05:30[Asia/Calcutta]","0.0","17.28"

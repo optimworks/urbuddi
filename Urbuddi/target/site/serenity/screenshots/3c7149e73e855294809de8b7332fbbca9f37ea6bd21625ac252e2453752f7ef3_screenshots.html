@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Urbuddi</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="8079a292cc2da2bcb7147783f09af942f3608600b0a7a2c1ec42e0b6e357cb7e.html">Login Test Case</a></span>
+                > <span class="truncate-60"><a
+                    href="3c7149e73e855294809de8b7332fbbca9f37ea6bd21625ac252e2453752f7ef3.html">Login with valid username and valid password </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 27-10-2023 19:47</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Login Test Case</span>
+                                    <span class="badge tag-badge" style="">Story</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Login with valid username and valid password
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Launch URL<br>Verify is login page displayed<br>Input credentials: &lt;Username&gt;, &lt;Password&gt;<br>Click on login button<br>Verify is home page displayed<br>Go to your profile<br>Verify is profile page displayed<br>Go to employment details<br>Verify are employment details displayed<br>Get role<br>Get role<br>Get role<br>Get role</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="8f959329a9532e92f61abb5336974d5287a2b3fd56df2c6ed8730333d9b9d9a4.png" title=" Login with valid username and valid password  -  Username = automation@gmail.com and  Password = automation@123 should display " width="1920"/>
+                <img src="8f959329a9532e92f61abb5336974d5287a2b3fd56df2c6ed8730333d9b9d9a4.png" title=" Launch URL" width="1920"/>
+                <img src="23351c89ed678b91e0ff8252674955b902e6233b5db6813e8655d2c3749fbd64.png" title=" Verify is login page displayed" width="1920"/>
+                <img src="ef875338a712f3c08693e8f7a1e5f423705727b0069135adf23c0de4ff92965c.png" title=" Input credentials: automation@gmail.com, automation@123" width="1920"/>
+                <img src="c2c52ec72c44a7978aff4056eeb64e577a9b587cc1110ef5d21b92fe294bffc5.png" title=" Click on login button" width="1920"/>
+                <img src="e53a14f456833b38b19fef45f2c7e47ada4f233f108fc1c56c74c3bd206fcb0c.png" title=" Verify is home page displayed" width="1920"/>
+                <img src="46c3f0227c5ced03a1a1f1e7296896fe1ba9d937ebe52d15d2b78f5852789650.png" title=" Go to your profile" width="1920"/>
+                <img src="46c3f0227c5ced03a1a1f1e7296896fe1ba9d937ebe52d15d2b78f5852789650.png" title=" Verify is profile page displayed" width="1920"/>
+                <img src="ffb7a21842523d844dd2e5f131e717ab0d2860fdc899d4dadf7ed70cbd7db877.png" title=" Go to employment details" width="1920"/>
+                <img src="ffb7a21842523d844dd2e5f131e717ab0d2860fdc899d4dadf7ed70cbd7db877.png" title=" Verify are employment details displayed" width="1920"/>
+                <img src="ffb7a21842523d844dd2e5f131e717ab0d2860fdc899d4dadf7ed70cbd7db877.png" title=" Get role" width="1920"/>
+                <img src="ffb7a21842523d844dd2e5f131e717ab0d2860fdc899d4dadf7ed70cbd7db877.png" title=" Get role" width="1920"/>
+                <img src="ffb7a21842523d844dd2e5f131e717ab0d2860fdc899d4dadf7ed70cbd7db877.png" title=" Get role" width="1920"/>
+                <img src="ffb7a21842523d844dd2e5f131e717ab0d2860fdc899d4dadf7ed70cbd7db877.png" title=" Get role" width="1920"/>
+                <img src="8f959329a9532e92f61abb5336974d5287a2b3fd56df2c6ed8730333d9b9d9a4.png" title=" Login with valid username and valid password  -  Username = automationhrone@yopmail.com and  Password = Test@123 should display " width="1920"/>
+                <img src="8f959329a9532e92f61abb5336974d5287a2b3fd56df2c6ed8730333d9b9d9a4.png" title=" Launch URL" width="1920"/>
+                <img src="23351c89ed678b91e0ff8252674955b902e6233b5db6813e8655d2c3749fbd64.png" title=" Verify is login page displayed" width="1920"/>
+                <img src="1b4ccbe9b0886c7b549955ef83a81e3f8597dbc0e5a865de77d6de4431af879b.png" title=" Input credentials: automationhrone@yopmail.com, Test@123" width="1920"/>
+                <img src="92e259454bbe85991d8e3eb013ba9a9ff15d6c4cf23c15bfa2a48f5486a5ffb4.png" title=" Click on login button" width="1920"/>
+                <img src="640e554a370c302746b053833ba66e69693662203c6791dcb393df1cd96302d5.png" title=" Verify is home page displayed" width="1920"/>
+                <img src="449879e77038cd62ffb127bf251c2b54ea564316bdf48df9fb59c11be3a3d2da.png" title=" Go to your profile" width="1920"/>
+                <img src="449879e77038cd62ffb127bf251c2b54ea564316bdf48df9fb59c11be3a3d2da.png" title=" Verify is profile page displayed" width="1920"/>
+                <img src="bab373980e9e6ec551a2117b01ba30121d06a85c970de956cfa3d528e64cea2f.png" title=" Go to employment details" width="1920"/>
+                <img src="bab373980e9e6ec551a2117b01ba30121d06a85c970de956cfa3d528e64cea2f.png" title=" Verify are employment details displayed" width="1920"/>
+                <img src="bab373980e9e6ec551a2117b01ba30121d06a85c970de956cfa3d528e64cea2f.png" title=" Get role" width="1920"/>
+                <img src="bab373980e9e6ec551a2117b01ba30121d06a85c970de956cfa3d528e64cea2f.png" title=" Get role" width="1920"/>
+                <img src="bab373980e9e6ec551a2117b01ba30121d06a85c970de956cfa3d528e64cea2f.png" title=" Get role" width="1920"/>
+                <img src="bab373980e9e6ec551a2117b01ba30121d06a85c970de956cfa3d528e64cea2f.png" title=" Get role" width="1920"/>
+                <img src="8f959329a9532e92f61abb5336974d5287a2b3fd56df2c6ed8730333d9b9d9a4.png" title=" Login with valid username and valid password  -  Username = automationleadone@yopmail.com and  Password = Test@123 should display " width="1920"/>
+                <img src="8f959329a9532e92f61abb5336974d5287a2b3fd56df2c6ed8730333d9b9d9a4.png" title=" Launch URL" width="1920"/>
+                <img src="23351c89ed678b91e0ff8252674955b902e6233b5db6813e8655d2c3749fbd64.png" title=" Verify is login page displayed" width="1920"/>
+                <img src="9f487dbade5c002d8f1c461ada19e1926bbed73b3632bd422169b3c6b537e63c.png" title=" Input credentials: automationleadone@yopmail.com, Test@123" width="1920"/>
+                <img src="16b9075e8288f9e0c8cc88ee151719a1b55674a4f6fb1cce4d0a244573c7dafa.png" title=" Click on login button" width="1920"/>
+                <img src="526d26182a36420db02c0172d1dc45e7ef86d18d3b9dbc532b745197688a57f5.png" title=" Verify is home page displayed" width="1920"/>
+                <img src="4d7b46f0fdfd10cc13a7c2a1a2f42c6dfd1899f2bf5b817cfaadb91574ee6134.png" title=" Go to your profile" width="1920"/>
+                <img src="4d7b46f0fdfd10cc13a7c2a1a2f42c6dfd1899f2bf5b817cfaadb91574ee6134.png" title=" Verify is profile page displayed" width="1920"/>
+                <img src="79fb17033cf467c65cc0e9c3ccc0175f011fc5088d70eda9c9608c1af795f7dd.png" title=" Go to employment details" width="1920"/>
+                <img src="79fb17033cf467c65cc0e9c3ccc0175f011fc5088d70eda9c9608c1af795f7dd.png" title=" Verify are employment details displayed" width="1920"/>
+                <img src="79fb17033cf467c65cc0e9c3ccc0175f011fc5088d70eda9c9608c1af795f7dd.png" title=" Get role" width="1920"/>
+                <img src="79fb17033cf467c65cc0e9c3ccc0175f011fc5088d70eda9c9608c1af795f7dd.png" title=" Get role" width="1920"/>
+                <img src="79fb17033cf467c65cc0e9c3ccc0175f011fc5088d70eda9c9608c1af795f7dd.png" title=" Get role" width="1920"/>
+                <img src="79fb17033cf467c65cc0e9c3ccc0175f011fc5088d70eda9c9608c1af795f7dd.png" title=" Get role" width="1920"/>
+                <img src="8f959329a9532e92f61abb5336974d5287a2b3fd56df2c6ed8730333d9b9d9a4.png" title=" Login with valid username and valid password  -  Username = automationemployeeone@yopmail.com and  Password = Test@123 should display " width="1920"/>
+                <img src="8f959329a9532e92f61abb5336974d5287a2b3fd56df2c6ed8730333d9b9d9a4.png" title=" Launch URL" width="1920"/>
+                <img src="23351c89ed678b91e0ff8252674955b902e6233b5db6813e8655d2c3749fbd64.png" title=" Verify is login page displayed" width="1920"/>
+                <img src="4271ed7c570b091521efc04662d252f0725b2577d037f629af7263e90b34bdb8.png" title=" Input credentials: automationemployeeone@yopmail.com, Test@123" width="1920"/>
+                <img src="f3687ee46887ef220b8a50abab64d68a2cf050f948040414f22da3dec868d764.png" title=" Click on login button" width="1920"/>
+                <img src="526d26182a36420db02c0172d1dc45e7ef86d18d3b9dbc532b745197688a57f5.png" title=" Verify is home page displayed" width="1920"/>
+                <img src="a07efc0d2705c9eed8ed982856d2a0ef92fb1d2d2fc4334f101e7fe433ede4a9.png" title=" Go to your profile" width="1920"/>
+                <img src="a07efc0d2705c9eed8ed982856d2a0ef92fb1d2d2fc4334f101e7fe433ede4a9.png" title=" Verify is profile page displayed" width="1920"/>
+                <img src="6514e3e23a1c9348a801bba2da586115c9c245065272767000e50416c9efa735.png" title=" Go to employment details" width="1920"/>
+                <img src="6514e3e23a1c9348a801bba2da586115c9c245065272767000e50416c9efa735.png" title=" Verify are employment details displayed" width="1920"/>
+                <img src="6514e3e23a1c9348a801bba2da586115c9c245065272767000e50416c9efa735.png" title=" Get role" width="1920"/>
+                <img src="6514e3e23a1c9348a801bba2da586115c9c245065272767000e50416c9efa735.png" title=" Get role" width="1920"/>
+                <img src="6514e3e23a1c9348a801bba2da586115c9c245065272767000e50416c9efa735.png" title=" Get role" width="1920"/>
+                <img src="6514e3e23a1c9348a801bba2da586115c9c245065272767000e50416c9efa735.png" title=" Get role: <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.0.81</span>
+</div>
+</body>
+</html>
