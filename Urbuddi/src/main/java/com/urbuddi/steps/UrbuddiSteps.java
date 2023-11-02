@@ -1,5 +1,6 @@
 package com.urbuddi.steps;
 
+import com.urbuddi.pages.LeaveManagementPage;
 import com.urbuddi.pages.LoginPage;
 import com.urbuddi.pages.YourProfilePage;
 
@@ -8,6 +9,7 @@ import net.thucydides.core.annotations.Step;
 public class UrbuddiSteps {
 	LoginPage login;
 	YourProfilePage profile;
+	LeaveManagementPage leave;
 
 	@Step
 	public void launchURL() {
@@ -92,5 +94,50 @@ public class UrbuddiSteps {
 	@Step
 	public void clickOnLogoutButton() {
 		login.clickOnLogoutButton();
+	}
+	
+	@Step
+	public void goToLeaveManagementMenu() {
+		leave.goToLeaveManagementMenu();
+	}
+
+	@Step
+	public void verifyIsLeaveManagementPageDisplayed() {
+		leave.verifyIsLeaveManagementPageDisplayed();
+	}
+
+	@Step
+	public void clickOnApplyLeave() {
+		leave.clickOnApplyLeave();
+	}
+
+	@Step
+	public void selectDate() {
+		leave.selectDate();
+	}
+
+	@Step
+	public void selectLead(String value) {
+		leave.selectLead(value);
+	}
+
+	@Step
+	public void inputReasonForRequest(String reason) {
+		leave.inputReasonForRequest(reason);
+	}
+
+	@Step
+	public void selectLeaveRequestType() {
+		leave.selectLeaveRequestType();
+	}
+
+	@Step
+	public void clickOnSubmitButton() {
+		leave.clickOnSubmitButton();
+	}
+
+	@Step
+	public void handleLeaveWarningClickOk() {
+		leave.handleLeaveWarningClickOk();
 	}
 }
