@@ -16,8 +16,7 @@ import net.thucydides.core.annotations.Title;
 import net.thucydides.core.util.EnvironmentVariables;
 
 @RunWith(SerenityRunner.class)
-public class LoginTestCase {
-
+public class LeaveManagementTestcase {
 	@Managed
 	WebDriver driver;
 
@@ -27,25 +26,27 @@ public class LoginTestCase {
 	EnvironmentVariables environment = ConfiguredEnvironment.getEnvironmentVariables();
 	RoleCredsLoader memberCredentials = new RoleCredsLoader(environment);
 
-	String[] roles = { "admin", "hr", "lead", "employee" };
+	Faker faker = new Faker();
+	String reason = "Request For Reason" + faker.lorem().sentence();
+
+	String[] roles = { "hr", "lead", "employee" };
 
 	private String username;
 	private String password;
+	private String lusername, ausername;
 
-	Faker faker = new Faker();
-	private String iusername = faker.name().firstName().toLowerCase() + "@yopmail.com";
-	private String ipassword = "Password" + faker.number().numberBetween(1, 1000);
-
-	@Title("Login with valid credentials")
+	@Title("Apply leave for a day")
 	@Test
-	public void loginWithValidCreds() {
+	public void applyLeave() {
 		for (String roleName : roles) {
 			username = memberCredentials.getUsername(roleName);
 			password = memberCredentials.getPassword(roleName);
 
-			System.out.println("Role: " + roleName);
-			System.out.println("Username: " + username);
-			System.out.println("Password: " + password);
+			lusername = memberCredentials.getUsername("lead");
+			ausername = memberCredentials.getUsername("admin");
+
+			System.out.println(lusername);
+			System.out.println(ausername);
 
 			urbuddy.launchURL();
 			urbuddy.verifyIsLoginPageDisplayed();
@@ -56,38 +57,26 @@ public class LoginTestCase {
 			urbuddy.verifyIsProfilePageDisplayed();
 			urbuddy.goToEmploymentDetails();
 			urbuddy.verifyAreEmploymentDetailsDisplayed();
+			String Role = urbuddy.getRole();
+			urbuddy.goToLeaveManagementMenu();
+			urbuddy.verifyIsLeaveManagementPageDisplayed();
+			urbuddy.clickOnApplyLeave();
+			urbuddy.handleLeaveWarningClickOk();
+			urbuddy.selectDate();
 
-			if (urbuddy.getRole() == "Admin") {
-				urbuddy.verifyAdminMenuItems();
-			} else if (urbuddy.getRole() == "HR") {
-				urbuddy.verifyHRMenuItems();
-			} else if (urbuddy.getRole() == "Lead") {
-				urbuddy.verifyLeadMenuItems();
-			} else if (urbuddy.getRole() == "Employee") {
-				urbuddy.verifyEmployeeMenuItems();
+			if ("Employee".equals(Role)) {
+				urbuddy.selectLead(lusername);
+			} else if ("HR".equals(Role)) {
+				urbuddy.selectLead(ausername);
+			} else if ("Lead".equals(Role)) {
+				urbuddy.selectLead(ausername);
 			}
+
+			urbuddy.inputReasonForRequest(reason);
+			urbuddy.selectLeaveRequestType();
+			urbuddy.clickOnSubmitButton();
 			urbuddy.clickOnLogoutButton();
 			urbuddy.verifyIsLoginPageDisplayed();
 		}
 	}
-
-	@Title("Login with empty creds")
-	@Test
-	public void loginWithEmptyCreds() {
-		urbuddy.launchURL();
-		urbuddy.verifyIsLoginPageDisplayed();
-		urbuddy.clickOnLoginButton();
-		urbuddy.verifyIsRequiredTextDisplayed();
-	}
-
-	@Title("Login with invalid creds")
-	@Test
-	public void loginWithInvalidCreds() {
-		urbuddy.launchURL();
-		urbuddy.verifyIsLoginPageDisplayed();
-		urbuddy.inputCredentials(iusername, ipassword);
-		urbuddy.clickOnLoginButton();
-		urbuddy.verifyIsInvalidCredTextDisplayed();
-	}
-
 }

@@ -4,10 +4,12 @@ import java.io.File;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
@@ -139,9 +141,22 @@ public class BasePage extends PageObject {
 	public void elementVisible(String locator) {
 		waitFor(getElement(locator)).shouldBeVisible();
 	}
-	
+
 	public void elementNotPresence(String locator) {
 		waitFor(getElement(locator)).shouldNotBePresent();
+	}
+
+	public void selectByValue(String locator, String value) {
+		Select dropdown = new Select(waitFor(getElement(locator)));
+		dropdown.selectByValue(value);
+	}
+
+	public boolean isElementVisible(String locator) {
+		try {
+			return $(locator).isVisible();
+		} catch (ElementNotVisibleException | NoSuchElementException e) {
+			return false;
+		}
 	}
 
 }
