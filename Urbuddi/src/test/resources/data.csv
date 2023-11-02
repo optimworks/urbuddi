@@ -1,0 +1,4 @@
+"Username	",Password,Firstname,Lastname,EmployeeID,Email,dob,joiningDate,Qualifications,Department,MobileNumber,Designation,Salary
+automation@gmail.com,automation@123,Optim,Works,OW001,optimworks,05-11-1998,25-10-2023,btech,software tester,9087654321,Admin,20000
+22112025,101,Hp001,,,,,,,,,,
+RandomEmployeeID,,,,,,,,,,,,
