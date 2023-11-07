@@ -3,14 +3,18 @@ package com.urbuddi.base;
 import java.io.File;
 import java.util.List;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import net.bytebuddy.asm.Advice.OffsetMapping.Target;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
+import net.thucydides.core.scheduling.SerenityFluentWait;
 
 public class BasePage extends PageObject {
 	public WebElementFacade getElement(String locator) {
@@ -83,6 +87,7 @@ public class BasePage extends PageObject {
 	}
 
 	public void type(String locator, String value) {
+		elementPresence(locator);
 		waitFor(getElement(locator)).sendKeys(value);
 	}
 
@@ -101,12 +106,14 @@ public class BasePage extends PageObject {
 
 	public void elementPresence(String locator) {
 		waitFor(getElement(locator)).shouldBePresent();
+		Assert.assertEquals(locator, locator);
 	}
 
 	public void fileUpload(String locator, String filepath) {
 		WebElementFacade fileInput = getElement(locator);
 		File fileToUpload = new File(filepath);
 		fileInput.sendKeys(fileToUpload.getAbsolutePath());
+
 	}
 
 	public void hoverOnElement(String locator) {
@@ -139,9 +146,13 @@ public class BasePage extends PageObject {
 	public void elementVisible(String locator) {
 		waitFor(getElement(locator)).shouldBeVisible();
 	}
-	
+
 	public void elementNotPresence(String locator) {
 		waitFor(getElement(locator)).shouldNotBePresent();
 	}
 
+	public void uploadFile(String filePath) {
+		WebElement fileInput = find(By.xpath(filePath)); // Replace with the actual locator of the file input field
+		fileInput.sendKeys(filePath);
+	}
 }
