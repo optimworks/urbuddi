@@ -16,7 +16,7 @@ import net.thucydides.core.annotations.Title;
 import net.thucydides.core.util.EnvironmentVariables;
 
 @RunWith(SerenityRunner.class)
-public class NewLoginTestCase {
+public class LoginTestCase {
 
 	@Managed
 	WebDriver driver;
